@@ -22,12 +22,24 @@ from urllib.parse import urlparse, parse_qs
 # ---------------------------------------------------------------------------
 WATCHLIST = [
     {
-        "url": "https://www.uniqlo.com/us/en/products/E482756-000/00?colorDisplayCode=00&sizeDisplayCode=006",
-        "label": "Product A",
+        "url": "https://www.uniqlo.com/us/en/products/E484776-000/00?colorDisplayCode=09&sizeDisplayCode=006",
+        "label": "E484776-000 Black XL",
     },
     {
-        "url": "https://www.uniqlo.com/us/en/products/E486158-000/00?colorDisplayCode=62&sizeDisplayCode=003",
-        "label": "Product B",
+        "url": "https://www.uniqlo.com/us/en/products/E482756-000/00?colorDisplayCode=00&sizeDisplayCode=006",
+        "label": "E482756-000 White XL",
+    },
+    {
+        "url": "https://www.uniqlo.com/us/en/products/E486158-000/00?colorDisplayCode=62&sizeDisplayCode=006",
+        "label": "E486158-000 Blue XL",
+    },
+    {
+        "url": "https://www.uniqlo.com/us/en/products/E487966-000/00?colorDisplayCode=07&sizeDisplayCode=006",
+        "label": "E487966-000 Gray XL",
+    },
+    {
+        "url": "https://www.uniqlo.com/us/en/products/E486159-000/00?colorDisplayCode=00&sizeDisplayCode=006",
+        "label": "E486159-000 White XL",
     },
     # --- Add more below, same shape ---------------------------------------
     # {
