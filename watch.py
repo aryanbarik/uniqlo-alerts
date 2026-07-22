@@ -63,6 +63,7 @@ HEADERS = {
 
 STATE_FILE = "stock_state.json"
 DISCORD_WEBHOOK = os.environ.get("DISCORD_WEBHOOK", "")
+DISCORD_USER_ID = "442188946252890122"
 
 
 def parse_url(url):
@@ -123,7 +124,7 @@ def save_state(state):
 
 
 def notify(label, url):
-    msg = f"🎉 BACK IN STOCK: {label}\n{url}"
+    msg = f"<@{DISCORD_USER_ID}> 🎉 BACK IN STOCK: {label}\n{url}"
     print(msg)
     if DISCORD_WEBHOOK:
         try:
