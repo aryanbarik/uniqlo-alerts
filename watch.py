@@ -63,7 +63,7 @@ HEADERS = {
 
 STATE_FILE = "stock_state.json"
 DISCORD_WEBHOOK = os.environ.get("DISCORD_WEBHOOK", "")
-DISCORD_USER_ID = "DISCORD_USER_ID_REDACTED"
+DISCORD_USER_ID = os.environ.get("DISCORD_USER_ID", "")  # optional; pings this user if set
 
 
 def parse_url(url):
@@ -124,7 +124,8 @@ def save_state(state):
 
 
 def notify(label, url):
-    msg = f"<@{DISCORD_USER_ID}> 🎉 BACK IN STOCK: {label}\n{url}"
+    mention = f"<@{DISCORD_USER_ID}> " if DISCORD_USER_ID else ""
+    msg = f"{mention}🎉 BACK IN STOCK: {label}\n{url}"
     print(msg)
     if DISCORD_WEBHOOK:
         try:

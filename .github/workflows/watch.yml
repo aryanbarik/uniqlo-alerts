@@ -30,6 +30,7 @@ jobs:
       - name: Run watcher
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          DISCORD_USER_ID: ${{ secrets.DISCORD_USER_ID }}
         run: python watch.py
 
       - name: Commit updated state
